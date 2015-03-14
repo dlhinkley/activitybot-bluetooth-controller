@@ -26,3 +26,15 @@ The Activitybot has the RN-42 bluetooth interface.  The NodeJS app uses Eelco's 
 * Open a browser and visit http://localhost:8000
 * Wait for Status to change to "Connected"
 * Drive the robot using the controls
+
+## RN-42 Schematic
+ 
+`  +--------------+            `
+`  | RN-42    GND +--- GND     `
+`  |          VIN +--- 3.3V    `
+`  |          RST +--- P0      `
+`  |           RX +--- P1      `
+`  |           TX +--- P2      `
+`  |          RTS +--- P3      `
+`  |          CTS +--- P4      `
+`  +--------------+            `
