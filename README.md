@@ -7,6 +7,7 @@ The Activitybot has the RN-42 bluetooth interface.  The NodeJS app uses Eelco's 
 ## Requirements
 * [ActivityBot (https://www.parallax.com/product/32500)]
 * [RN-42 Bluetooth Module (https://www.parallax.com/product/30086)]
+* [OPTIONAL Turet (https://www.parallax.com/product/910-28015a)]
 * [SimpleIDE for Propeller C (http://learn.parallax.com/node/640)]
 * Computer with bluetooth that can run NodeJS
  
