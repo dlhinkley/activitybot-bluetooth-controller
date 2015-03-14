@@ -1,4 +1,4 @@
-myActivityBot.c
+activityBot.c
 >compiler=C
 >memtype=cmm main ram compact
 >optimize=-Os
