@@ -12,6 +12,6 @@
     "bluetooth-serial-port": "^1.2.1",
     "engine.io": "^1.5.1",
     "eureca.io": "^0.6.2",
-    "express": "^4.11.2",
+    "express": "^4.11.2"
   }
 }

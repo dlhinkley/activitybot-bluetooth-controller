@@ -14,4 +14,14 @@ The Activitybot has the RN-42 bluetooth interface.  The NodeJS app uses Eelco's 
 * Install SimpleIDE
 * Change to SimpleIDE workspace (i.e. ..../SimpleIDE)
 * `git clone https://github.com/dlhinkley/activitybot-bluetooth-controller.git`
+* Load the code at robot/activityBot.side into Activity Bot
+* `cd activitybot-bluetooth-controller/controller`
 * `npm install`
+* `node --harmony-proxies index.js`
+
+## Running
+* Turn on Activity Bot
+* `node --harmony-proxies index.js`
+* Open a browser and visit http://localhost:8000
+* Wait for Status to change to "Connected"
+* Drive the robot using the controls

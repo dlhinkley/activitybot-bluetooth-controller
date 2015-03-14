@@ -4,24 +4,44 @@
         <title>My Activity Bot</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 		<script src="/eureca.js"></script>
+		<style>
+		  .headingTitle {
+    		  display:table; 
+    		  width:460px; 
+    		  border:1px solid black; 
+    		  text-align:center; 
+    		  margin-bottom:10px;
+		  }
+		  .headingCell {
+    		  padding:1px;
+    		  display:table-cell; 
+    		  width:17%;
+    		  border:1px solid black;
+		  }
+		  .dataCell {
+    		  
+    		  display:table-cell;
+    		  border:1px solid black;
+		  }
+		</style>
     </head>
     <body style="font-family:Arial;font-weight:bold;">
-       <div id="statusDisplay" style="display:table;">
-        <div style="display:table-row;">
-          <div style="display:table-cell;">Status</div>
-          <div style="display:table-cell;">Heading &deg;</div>
-          <div style="display:table-cell;">Turet &deg; </div>
-          <div style="display:table-cell;">Ping</div>
-          <div style="display:table-cell;">X</div>
-          <div style="display:table-cell;">Y</div>
+       <div id="statusDisplay" class="headingTitle">
+        <div style="display:table-row; ">
+          <div class="headingCell">Status</div>
+          <div class="headingCell">Heading &deg;</div>
+          <div class="headingCell">Turet &deg; </div>
+          <div class="headingCell">Ping (cm)</div>
+          <div class="headingCell" style="width:10%">X</div>
+          <div class="headingCell" style="width:10%">Y</div>
         </div>
         <div style="display:table-row;">
-          <div id="status" style="display:table-cell;"></div>
-          <div id="heading" style="display:table-cell;"></div>
-          <div id="turet" style="display:table-cell;"></div>
-          <div id="ping" style="display:table-cell;"></div>
-          <div id="x" style="display:table-cell;"></div>
-          <div id="y" style="display:table-cell;"></div>
+          <div id="status" class="dataCell">None</div>
+          <div id="heading" class="dataCell">0</div>
+          <div id="turet" class="dataCell">0</div>
+          <div id="ping" class="dataCell">0</div>
+          <div id="x" class="dataCell">0</div>
+          <div id="y" class="dataCell">0</div>
         </div>
     </div>
     <div id="direction-container" style="width: 420px; border: 1px solid black; padding: 20px; ">
@@ -31,29 +51,29 @@
             <div style="clear:both;"></div>
         </div>
         <div id="direction-stop-container" style="float:left;">
-            <div style="position:relative; width: 200px; height:220px; background: url('images/control.jpg') 200px 0px;">
+            <div style="position:relative; width: 200px; height:220px; background: url('control.jpg') 200px 0px;">
               <div id="upArrow" style="position:absolute; left:75px; top: 10px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.up()"></div>
               <div id="downArrow" style="position:absolute; left:75px; top: 145px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.down()"></div>
               <div id="leftArrow" style="position:absolute; left:10px; top: 75px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.left()"></div>
               <div id="rightArrow" style="position:absolute; left:135px; top: 79px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.right()"></div>
             </div>
-            <div id="stop" style="position:relative; width: 210px; height:80px; background: url('images/control.jpg') -225px -107px; cursor: pointer; cursor: hand;" onclick="server.stop()">
+            <div id="stop" style="position:relative; width: 210px; height:80px; background: url('control.jpg') -225px -107px; cursor: pointer; cursor: hand;" onclick="server.stop()">
                 <div style="position:absolute; top:20px; left: 50px;color:white; font-size:40px; font-weight:bold;background-color:rgb(65,65,65);">STOP</div>
             </div>
         </div>
         <div id="turet-container" style="position:relative;float:left;">
-            <div style="position:relative; width: 200px; height:138px; background: url('images/control.jpg') 200px 0px;">
+            <div style="position:relative; width: 200px; height:138px; background: url('control.jpg') 200px 0px;">
               <div id="upArrow" style="position:absolute; left:75px; top: 10px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.turetStraight()"></div>
               <div id="leftArrow" style="position:absolute; left:10px; top: 75px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.turetLeft()"></div>
               <div id="rightArrow" style="position:absolute; left:135px; top: 79px; width: 50px; height: 50px; cursor: pointer; cursor: hand;" onclick="server.turetRight()"></div>
             </div>
-            <div id="stop" style="margin-top:80px; position:relative; width: 210px; height:80px; background: url('images/control.jpg') -225px -107px; cursor: pointer; cursor: hand;" onclick="server.scan()">
+            <div id="stop" style="margin-top:80px; position:relative; width: 210px; height:80px; background: url('control.jpg') -225px -107px; cursor: pointer; cursor: hand;" onclick="server.scan()">
                   <div style="position:absolute; top:20px; left: 50px;color:white; font-size:40px; font-weight:bold;background-color:rgb(65,65,65);">SCAN</div>
 
             </div>
         </div>
         <div style="clear:both"></div>
     </div>
-        <script type="text/javascript" src="../scripts/frontend.js"></script>
+        <script type="text/javascript" src="frontend.js"></script>
     </body>
 </html>

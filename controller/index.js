@@ -13,7 +13,7 @@ var rxIn = '';
 var prevCommand = '';
 var eurecaClient = null;
 
-var Command = require('./public_html/scripts/command.js');
+var Command = require('./command.js');
 
 // https://github.com/TooTallNate/keypress
 /*
@@ -35,7 +35,6 @@ var commandKeyMatrix = {
                         'down': 'rampDown',
                         'slow': 'slow', // slow
                         'stop': 'stop', // stop
-                        'ping': 'p', // ping
                         'scan': 'scan', // Turet scan 
 };
 function init() {
@@ -80,24 +79,7 @@ function processUpdateCommand(text) {
     turet.setDirection(cmd.turet);
     
 }
-function keyPressEvent(ch, key) {
 
-  //console.log('got "keypress"', key);
-  
-  // Cancel on control c
-  if (key && key.ctrl && key.name == 'c') {
-    //process.stdin.pause();
-    process.exit(0);
-  }
-  else if (key && key.name && commandKeyMatrix.hasOwnProperty(key.name) ) {
-      
-    blueTooth.sendCommand( commandKeyMatrix[ key.name ]);
-      
-  }
-  else if (key && key.name) {
-    blueTooth.sendCommand(key.name);
-  }
-}
 /**
 * Wrapper for node's bluetooth serial from https://github.com/eelcocramer/node-bluetooth-serial-port
 */
@@ -165,7 +147,7 @@ function BlueTooth() {
                 
                 receivedText(rxIn);
                 rxIn = '';
-                console.log('received=' + received);
+                //console.log('received=' + received);
             }
             else {
                 
